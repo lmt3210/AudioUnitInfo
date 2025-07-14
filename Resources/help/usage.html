@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html>
+<head>
+  <title>AudioUnitInfo Help</title> 
+  <meta name="AppleTitle" content="AudioUnitInfo Help">
+  <meta name="copyright"
+   content="Copyright &copy; 2023-2025 Larry M. Taylor. All rights reserved.">
+  <meta name="AppleIcon" content="images/icon_64x64.png">
+  <meta name="description" content="AudioUnitInfo Help.">
+  <meta http-equiv="content-type" content="text/html; charset=x-mac-roman">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Side navigation -->
+<div class="sidenav">
+  <br /><br />
+  <br /><br />
+  <a href="index.html">Welcome</a>
+  <br /><br />
+  <a href="usage.html">Usage</a>
+  <br /><br />
+  <a href="support.html">Support</a>
+  <br /><br />
+  <a href="versions.html">Version History</a>
+  <br /><br />
+</div>
+
+<!-- Page content -->
+<div class="main">
+<div class="border">
+<table border="0" cellpadding="0" cellspacing="5" summary="">
+  <tbody><tr valign="middle">
+  <td width="60" align="center" valign="middle">
+  <p><img src="images/icon_32x32.png" alt=""></p></td>
+  <td class="contents" valign="middle">
+  <h1>AudioUnitInfo Help</h1></td></tr>
+</tbody></table>
+</div>
+
+<h2>Usage</h2>
+<p><img src="images/controls.jpg" alt=""></p>
+<br />
+Open AudioUnitInfo, press the Scan button, then wait for the list to be populated. Installed audio units are initially displayed in alphabetical order by name. Clicking on any column header will allow sorting by the contents of the selected column.
+<br /><br />
+Select any row in the list, then press one of the buttons for additional information (Conf Info or State), or press the Validate button to run validation tests on the selected audio unit using the auval utility.
+<br /><br />
+Selecting one or more rows will display the count of the number of audio units selected.
+<br /><br />
+Minimum OS:
+<br />
+<table style="width:70%;" summary="">
+<tr><th style="width:10%"></th>
+<th style="width:10%"></th>
+<th style="width:50%"></th></tr>
+<tr><td></td><td>15.x</td><td>Sequoia</td></tr>
+<tr><td></td><td>14.x</td><td>Sonoma</td></tr>
+<tr><td></td><td>13.x</td><td>Ventura</td></tr>
+<tr><td></td><td>12.x</td><td>Monterey</td></tr>
+<tr><td></td><td>11.x</td><td>Big Sur</td></tr>
+<tr><td></td><td>10.15.x</td><td>Catalina</td></tr>
+<tr><td></td><td>10.14.x</td><td>Mojave</td></tr>
+<tr><td></td><td>10.13.x</td><td>High Sierra</td></tr>
+<tr><td></td><td style="vertical-align: top;">N/A</td><td>The audio unit does not report a minimum version</td></tr>
+</table>
+<br /><br />
+Architecture information is not available for every audio unit installed. AudioUnitInfo will only attempt to determine the architecture for the audio units installed in /Library/Audio/Plug-Ins/Components and ~/Library/Audio/Plug-Ins/Components. However, one can probably assume that the other installed audio units, such as those from Apple, have an architecture that matches the native architecture of your system. Possible architectures:
+<br />
+<table style="width:70%;" summary="">
+<tr><th style="width:10%"></th>
+<th style="width:10%"></th>
+<th style="width:50%"></th></tr>
+<tr><td></td><td>A64</td><td>ARM 64-bit (Apple M1, M2, M3, M4, etc.)</td></tr>
+<tr><td></td><td>I64</td><td>Intel 64-bit</td></tr>
+<tr><td></td><td>I32</td><td>Intel 32-bit</td></tr>
+<tr><td></td><td>PPC</td><td>PowerPC</td></tr>
+<tr><td></td><td style="vertical-align: top;">N/A</td>
+<td>Not available (cannot determine, etc.)</td></tr>
+</table>
+<br />
+<b> CompType, Subtype, and Manufacturer:</b> The CompType (component type), Subtype, and manufacturer columns show the four-character codes used by host applications to load a particular audio unit.
+<br /><br />
+<b>Sandbox Safe:</b> The Sandbox Safe column indicates whether it is safe to open the audio unit in a sandboxed process.
+<br /><br />
+<b>Async:</b> The Async column indicates audio units that require asynchronous instantiation.
+<br /><br />
+<b>In Process:</b> The In Process column indicates whether the audio unit can be loaded into the current process. This is always true for V2 audio units; it depends on the packaging in the case of a V3 audio unit. Note that this flag will change based on the hosting process.
+<br /><br />
+<b>Conf Info:</b> Pressing the Conf Info button results in a display of the basic configuration information for the selected audio unit.
+<br /><br />
+<b>State:</b> Pressing the State button results in a display of a snapshot of the selected audio unit's properties and parameters, which is the same data that would be saved as a preset by the AU or a host. Most of the state data for many audio units is a list of numbers that have little meaning to a user, but there may be some interesting information before or after the data fields.
+<br /><br />
+</div>
+</body>
+</html>

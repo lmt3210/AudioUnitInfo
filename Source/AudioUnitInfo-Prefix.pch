@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AudioUnitInfoApp' target in the 'AudioUnitInfo' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
