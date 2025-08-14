@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="com.larrymtaylor.AudioUnitInfo"/>
+    <options customize="never" require-scripts="false" hostArchitectures="x86_64,arm64"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.larrymtaylor.AudioUnitInfo"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.larrymtaylor.AudioUnitInfo" visible="false">
+        <pkg-ref id="com.larrymtaylor.AudioUnitInfo"/>
+    </choice>
+    <pkg-ref id="com.larrymtaylor.AudioUnitInfo" version="VERSION" onConclusion="none">app.pkg</pkg-ref>
+</installer-gui-script>
