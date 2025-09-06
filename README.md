@@ -5,10 +5,6 @@
 
 AudioUnitInfo is a utility that lists all installed audio units and displays information about each one.
 
-## Downloads
-
-Releases can be downloaded [here](https://www.larrymtaylor.com/software.php).
-
 ## Dependencies
 AudioUnitInfo requires LTCommon. It is available on GitHib 
 [here](https://github.com/lmt3210/LTCommon).
